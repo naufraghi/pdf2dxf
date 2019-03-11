@@ -1,2 +1,3 @@
 # pdf2dxf
-Covert a PDF page to DXF
+
+Mix and matches pdfalto + dxfwrite + cjlano/svg to convert a single PDF page to DXF

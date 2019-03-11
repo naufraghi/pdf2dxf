@@ -1,0 +1,23 @@
+language: python
+python:
+  - "3.7"
+matrix:
+  include:
+    - python: 3.7
+      dist: xenial
+os:
+  - linux
+  - windows
+before_install:
+  - pip install poetry
+install:
+  - poetry install -v
+script:
+  - poetry run python -O -m PyInstaller --add-binary pdfalto/$TRAVIS_OS_NAME/pdfalto*:. -F pdf2dxf.py
+deploy:
+  provider: releases
+  api_key: "GITHUB OAUTH TOKEN"
+  file: "FILE TO UPLOAD"
+  skip_cleanup: true
+  on:
+    tags: true

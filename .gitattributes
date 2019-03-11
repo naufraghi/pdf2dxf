@@ -1,0 +1,2 @@
+pdfalto/linux/pdfalto filter=lfs diff=lfs merge=lfs -text
+pdfalto/win32/pdfalto.exe filter=lfs diff=lfs merge=lfs -text
